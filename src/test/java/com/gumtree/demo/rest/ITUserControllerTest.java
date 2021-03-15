@@ -68,8 +68,6 @@ public class ITUserControllerTest {
 				.andExpect(status().isBadRequest())
 				.andExpect(view().name("/resetPassword"))
 				.andExpect(model().attributeHasFieldErrorCode("resetPasswordForm",
-						"email", is("Email")))
-				.andExpect(model().attributeHasFieldErrorCode("resetPasswordForm",
 						"confirmPassword", is("InputDataMatch")));
 	}
 
