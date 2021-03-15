@@ -33,7 +33,7 @@ public class FileTrackerPasswordEventListener
 		log.info("received password change event - User:{}",
 				audit.getRecent().getUsername());
 		String filename = String.format("%s_%s", PASSWORD_EVENT,
-				audit.getTime().format(DateTimeFormatter.ISO_INSTANT));
+				audit.getTime().format(DateTimeFormatter.BASIC_ISO_DATE));
 		ObjectToJsonFileWriterUtil writer = new ObjectToJsonFileWriterUtil(folder,
 				filename);
 		writer.writeJsonFile(event.getSource());

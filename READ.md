@@ -34,6 +34,8 @@ localhost:8080/h2-console
 ```
 refer to the `application.properties` for the h2db access.
 
+Check the `data.sql` for initial data loaded in application startup.
+
 ## Integrating with PasswordReset event
 
 * To track event such as change of password, the app uses [ApplicationEvent](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationEvent.html) of Spring to support Publisher to Listener notification to extend integration to other classes.
@@ -42,6 +44,9 @@ refer to the `application.properties` for the h2db access.
 ApplicationListener<ChangePasswordEvent>
 ``` 
 * The app also writes event object into a json file in `app.event.folder` of the application properties to serialize the event for tracking purpose.
+
+## GitHub
+Check [passwordreset-demo](https://github.com/orengoreng/passwordreset-demo) for code updates.
 
 
 
